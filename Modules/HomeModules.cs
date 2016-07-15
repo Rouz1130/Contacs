@@ -19,7 +19,6 @@ namespace AddressBook
       Get["/new_contact"] = _ => {
         return View["new_contact.cshtml"];
       };
-
       Post["/added_contact"] = _ => {
         Contact newContact = new Contact(Request.Form["contact-name"], Requst.Form["contact-phoneNumber"], Request.Form["contact-address"]);
         return View["added_contact.cshtml", newContact];
@@ -28,6 +27,7 @@ namespace AddressBook
           Contact.ClearAll();
           return View["deleted_contact.cshtml"];
         };
+    }
   }
- }
+
 }

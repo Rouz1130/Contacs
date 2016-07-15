@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace AddressBook
+namespace ContactInfo
 {
   public class Contact
   {
@@ -12,7 +12,7 @@ namespace AddressBook
 
     public Contact(string name, int phoneNumber, string address)
     {
-      _name - name;
+      _name = name;
       _phoneNumber = phoneNumber;
       _address = address;
       _instances.Add(this);
@@ -43,25 +43,23 @@ namespace AddressBook
     {
       _address = newAddress,=;
     }
-    public int GetId()
-    {
-      return _id;
-    }
     public static List<Contact> GetAll()
     {
       return _instances;
     }
-
+    public int GetId()
+    {
+      return _id;
+    }
     public static void ClearAll()
     {
       _instances.Clear();
     }
-    public static Contact Find(int searchId)
+    public static Contact FindContact(int searchId)
     {
       return _instances[searchId -1];
     }
 
   }
  }
-
 }

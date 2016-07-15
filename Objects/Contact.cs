@@ -29,7 +29,7 @@ namespace ContactInfo
     }
     public int GetPhoneNumber()
     {
-      return _phoneNumber
+      return _phoneNumber;
     }
     public void SetPhoneNumber(int newPhoneNumber)
     {
@@ -41,7 +41,7 @@ namespace ContactInfo
     }
     public void SetAddress(string newAddress)
     {
-      _address = newAddress,=;
+      _address = newAddress;
     }
     public static List<Contact> GetAll()
     {
@@ -62,4 +62,3 @@ namespace ContactInfo
 
   }
  }
-}

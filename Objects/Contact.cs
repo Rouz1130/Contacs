@@ -12,9 +12,13 @@ namespace AddressBook
 
     public Contact(string name, int phoneNumber, string address)
     {
+      _name - name;
+      _phoneNumber = phoneNumber;
+      _address = address;
+      _instances.Add(this);
+      _id = _instances.Count;
 
 
-      
     }
 
 

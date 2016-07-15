@@ -20,11 +20,11 @@ namespace AddressBook
         return View["new_contact.cshtml"];
       };
       Post["/added_contact"] = _ => {
-        Contact newContact = new Contact(Request.Form["contact-name"], Requst.Form["contact-phoneNumber"], Request.Form["contact-address"]);
+        Contact newContact = new Contact(Request.Form["contact-name"], Request.Form["contact-phoneNumber"], Request.Form["contact-address"]);
         return View["added_contact.cshtml", newContact];
 
         Post["/deleted_contact"] = _ => {
-          Contact.ClearAll();
+          contact.ClearAll();
           return View["deleted_contact.cshtml"];
         };
     }

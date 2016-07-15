@@ -1,6 +1,6 @@
 using Nancy;
 using System.Collections.Generic;
-using AddressBook.Objects;
+using Contacts.Objects;
 
 namespace AddressBook
 {
@@ -21,8 +21,8 @@ namespace AddressBook
       };
 
       Post["/added_contact"] = _ => {
-        Contact newContact = new Contact(Request.Form["contact-name"]; Requst.Form["contact-phoneNumber"], Request.Form["contact-address"]);
-        return View["added_contact.cshtml", newContact];    };
+        Contact newContact = new Contact(Request.Form["contact-name"], Requst.Form["contact-phoneNumber"], Request.Form["contact-address"]);
+        return View["added_contact.cshtml", newContact];
 
         Post["/deleted_contact"] = _ => {
           Contact.ClearAll();

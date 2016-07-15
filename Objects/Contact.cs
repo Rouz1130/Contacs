@@ -17,17 +17,51 @@ namespace AddressBook
       _address = address;
       _instances.Add(this);
       _id = _instances.Count;
-
-
     }
 
+    public string GetName()
+    {
+      return _name;
+    }
+    public void SetName(string newName)
+    {
+      _name = newName;
+    }
+    public int GetPhoneNumber()
+    {
+      return _phoneNumber
+    }
+    public void SetPhoneNumber(int newPhoneNumber)
+    {
+      _phoneNumber = newPhoneNumber;
+    }
+    public string GetAddress()
+    {
+      return _address;
+    }
+    public void SetAddress(string newAddress)
+    {
+      _address = newAddress,=;
+    }
+    public int GetId()
+    {
+      return _id;
+    }
+    public static List<Contact> GetAll()
+    {
+      return _instances;
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
+    public static Contact Find(int searchId)
+    {
+      return _instances[searchId -1];
+    }
 
   }
-
-
-
-
-
-
+ }
 
 }

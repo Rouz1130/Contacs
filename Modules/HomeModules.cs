@@ -12,10 +12,23 @@ namespace AddressBook
         return View["index.cshtml"];
       }:
 
+      Get["/display-contact"] = _ => {
+        return View["display-contact.cshtml"];
+      };
 
-      Get]["/contact_new"] = _ => {
-        return View["contact_new.cshtml"];
+      Get]["/new_contact"] = _ => {
+        return View["new_contact.cshtml"];
       };
 
 
-      Get["/"]
+
+      Post["/added_contact"] = _ => {
+        Contact newContact = new Contact(Request.Form["contact-name"]; Requst.Form["contact_phoneNumber"], Request.Form["contact-address"]);
+        return View["added_contact.cshtml", newContact];    };
+
+        Post["/deleted_contact"] = _ => {
+          Contact.ClearAll();
+          return View["deleted_deleted.cshtml"];
+        };
+  }
+}
